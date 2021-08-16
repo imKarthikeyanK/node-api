@@ -8,14 +8,14 @@ var _db;
 
 
 module.exports = {
-  connectToServer: function( callback ) {
-    MongoClient.connect( url,  { useNewUrlParser: true }, function( err, client ) {
-      _db  = client.db('weatherData');
-      return callback( err );
-    } );
+  connectToServer: function (callback) {
+    MongoClient.connect(url, { useNewUrlParser: true }, function (err, client) {
+      _db = client.db('weatherData');
+      return callback(err);
+    });
   },
 
-  getDb: function() {
+  getDb: function () {
     return _db;
   }
 };
